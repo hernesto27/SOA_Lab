@@ -26,32 +26,9 @@ https://ws.homologacao.ufsc.br/services/CEPService?wsdl
     - cepUser/cepUser2008
 - Test the service with SoapUI.
 
-3. ***CEP Service Project in MULE***
-- **SwitchYard**
-    - **Group Id:** `br.ufsc.das`
-    - **Namespace:** `http://das.ufsc.br`
-    - **target Id:** `br.ufsc.das`
-    
-- **BPEL**
-    Variable initialization code snippet for _service partnerLink_ in the assign block BPEL file:
-    ```xml
-    <int:getCepInfo xmlns:int="http://interfaces.cep.services.ufsc.br/">
-    	<cep/>
-    </int:getCepInfo>
-    ```
-- **deploy.xml**
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:das.ufsc.br="http://das.ufsc.br">
-      <process name="das.ufsc.br:CEP_Process">
-        <process-events generate="all"/>
-        <provide partnerLink="CEP_Process">
-    		<service name="das.ufsc.br:CEP_Process" port="ignored" />    
-        </provide>
-        <invoke partnerLink="CEP_Service">
-        <service name="das.ufsc.br:CEPService" port="ignored" />
-        </invoke>
-      </process>
-    </deploy>
-    ```
+3. **Consume a soap service with MULE**
+- Start the environment _**Anypoint Studio**_ from the folder _**Ferramentas -> AnypointStudio-for-win-64bit-6.6.3-201909242011(6.6_3.9)**_
+- Import the project _**CEPservice**_ from the folder _**Ferramentas -> AnypointStudio-for-win-64bit-6.6.3-201909242011(6.6_3.9)**_
+- Description of slack.
+- Start the server and test the service.
 
