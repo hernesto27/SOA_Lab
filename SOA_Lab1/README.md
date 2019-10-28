@@ -26,7 +26,7 @@ https://ws.homologacao.ufsc.br/services/CEPService?wsdl
     - cepUser/cepUser2008
 - Test the service with SoapUI.
 
-3. *CEP Service Project in MULE*
+3. ***CEP Service Project in MULE***
 - **SwitchYard**
     - **Group Id:** `br.ufsc.das`
     - **Namespace:** `http://das.ufsc.br`
