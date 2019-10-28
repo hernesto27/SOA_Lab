@@ -2,19 +2,19 @@
 
 Information related to exercises of session #1 of SOA Labs.
 
-- Analyse the application _**portalNewTec**_
+- Analysis of the application _**portalNewTec**_
 - Calling external SOAP Web Service
 
 Prerequisites:
     You should have installed all software listed in [previous step][step0].
 
 1. **PortalNewTec**
-    - Start the environment _**Ret Hat Developer Studio**_
-    - Import the project _**portalNewTec**_ from the folder _**Ferramentas**_
-    - Describe the application.
-    - Start the server and test the aplication.
+- Start the environment _**Ret Hat Developer Studio**_
+- Import the project _**portalNewTec**_ from the folder _**Ferramentas**_
+- Description of the application .
+- Start the server and test the aplication.
     
-#### 2. Invoking External SOAP Service Project
+2. **Invoking External SOAP Service Project**
 This example shows how to invoke a SOAP Web Service to find Brazilian CEP information, the service provider is **UFSC**.
 
 The service endpoint is:
@@ -23,7 +23,7 @@ https://ws.homologacao.ufsc.br/services/CEPService
 The service description is:
 https://ws.homologacao.ufsc.br/services/CEPService?wsdl
 
-    - cepUser/cepUser2008
+- cepUser/cepUser2008
     
 Test the service with SoapUI.
 
