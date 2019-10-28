@@ -1,0 +1,3 @@
+<int:getCepInfo xmlns:int="http://interfaces.cep.services.ufsc.br/">
+         <cep>#[json:cep]</cep>
+</int:getCepInfo>
