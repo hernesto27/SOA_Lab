@@ -15,17 +15,18 @@ Prerequisites:
 - Start the server and test the aplication.
     
 2. **Invoking External SOAP Service Project**
+
 This example shows how to invoke a SOAP Web Service to find Brazilian CEP information, the service provider is **UFSC**.
 
-The service endpoint is:
+- The service endpoint is:
 https://ws.homologacao.ufsc.br/services/CEPService
 
-The service description is:
+- The service description is:
 https://ws.homologacao.ufsc.br/services/CEPService?wsdl
 
 - cepUser/cepUser2008
     
-Test the service with SoapUI.
+- Test the service with SoapUI.
 
 ##### Code Snippets "CEP Service Project"
 - **SwitchYard**
