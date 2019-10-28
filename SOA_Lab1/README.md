@@ -5,8 +5,8 @@ Information related to exercises of session #1 of SOA Labs.
 1. Analyse the application _**portalNewTec**_
 2. Calling external SOAP Web Service
 
-- Prerequisites
-You should have installed all software listed in [previous step][step0].
+- Prerequisites:
+    You should have installed all software listed in [previous step][step0].
 
 #### 1. PortalNewTec
     - Start the environment _**Ret Hat Developer Studio**_
