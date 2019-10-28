@@ -26,7 +26,7 @@ https://ws.homologacao.ufsc.br/services/CEPService?wsdl
     - cepUser/cepUser2008
 - Test the service with SoapUI.
 
-3. **Consume a soap service with MULE**
+3. **Consume a soap service with MULE/ESB**
 - Start the environment _**Anypoint Studio**_ from the folder _**Ferramentas -> AnypointStudio-for-win-64bit-6.6.3-201909242011(6.6_3.9)**_
 - Import the project _**CEPservice**_ from the folder _**Ferramentas -> AnypointStudio-for-win-64bit-6.6.3-201909242011(6.6_3.9)**_
 - Description of slack.
