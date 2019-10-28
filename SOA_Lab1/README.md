@@ -11,7 +11,7 @@ Prerequisites:
 
 1. **PortalNewTec**
 - Start the environment _**Ret Hat Developer Studio**_
-- Import the project _**portalNewTec**_ from the folder _**Ferramentas**_
+- Import the project _**portalNewTec**_
 - Description of the application .
 - Start the server and test the aplication.
     
@@ -28,7 +28,7 @@ https://ws.homologacao.ufsc.br/services/CEPService?wsdl
 
 3. **Consume a soap service with MULE/ESB**
 - Start the environment _**Anypoint Studio**_ from the folder _**Ferramentas -> AnypointStudio-for-win-64bit-6.6.3-201909242011(6.6_3.9)**_
-- Import the project _**CEPservice**_ from the folder _**Ferramentas -> AnypointStudio-for-win-64bit-6.6.3-201909242011(6.6_3.9)**_
+- Import the project _**cep_service**_
 - Description of flow.
 - Test the service.
 
