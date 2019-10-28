@@ -8,7 +8,7 @@ Information related to exercises of session #1 of SOA Labs.
 - Prerequisites:
     You should have installed all software listed in [previous step][step0].
 
-#### 1. PortalNewTec
+1. PortalNewTec
     - Start the environment _**Ret Hat Developer Studio**_
     - Import the project _**portalNewTec**_ from the folder _**Ferramentas**_
     - Describe the application.
