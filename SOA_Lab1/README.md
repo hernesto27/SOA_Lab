@@ -2,8 +2,9 @@
 
 Information related to exercises of session #1 of SOA Labs.
 
-- Analysis of the application _**portalNewTec**_
-- Calling external SOAP Web Service
+1. Analysis of the application _**portalNewTec**_
+2. Calling external SOAP Web Service
+3. CEP Service Project in MULE
 
 Prerequisites:
     You should have installed all software listed in [previous step][step0].
@@ -25,7 +26,7 @@ https://ws.homologacao.ufsc.br/services/CEPService?wsdl
     - cepUser/cepUser2008
 - Test the service with SoapUI.
 
-##### Code Snippets "CEP Service Project"
+3. *CEP Service Project in MULE*
 - **SwitchYard**
     - **Group Id:** `br.ufsc.das`
     - **Namespace:** `http://das.ufsc.br`
