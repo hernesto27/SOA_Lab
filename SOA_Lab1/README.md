@@ -20,12 +20,9 @@ This example shows how to invoke a SOAP Web Service to find Brazilian CEP inform
 
 - The service endpoint is:
 https://ws.homologacao.ufsc.br/services/CEPService
-
 - The service description is:
 https://ws.homologacao.ufsc.br/services/CEPService?wsdl
-
-- cepUser/cepUser2008
-    
+    - cepUser/cepUser2008
 - Test the service with SoapUI.
 
 ##### Code Snippets "CEP Service Project"
