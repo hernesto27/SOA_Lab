@@ -54,4 +54,4 @@ During installation:
 
 
 [here1]: <https://www.dropbox.com/home/Ferramentas>
-[here2]: <https://drive.google.com/drive/my-drive>
+[here2]: <https://drive.google.com/open?id=13ogiZo3nIRS3icD50Dbk7GLH2-7lG2ax>
