@@ -3,7 +3,8 @@
 ## Tools for SOA lessons 
 
 #### 1. Download all necessary tools
-- Install the tools in the order stated below. Link for download [here].
+- Install the tools in the order stated below. Link for download [here1].
+- Install the tools in the order stated below. Link for download [here2]
 - UI SOAP: https://www.soapui.org/downloads/latest-release.html
 
 #### 2. Download and install the **Java development kit (jdk)**.
@@ -52,4 +53,5 @@ During installation:
 - Accept any additional dependencies and license agreements.
 
 
-[here]: <https://www.dropbox.com/home/Ferramentas>
+[here1]: <https://www.dropbox.com/home/Ferramentas>
+[here2]: <https://drive.google.com/drive/my-drive>
