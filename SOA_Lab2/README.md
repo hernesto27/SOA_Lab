@@ -4,8 +4,8 @@ This document contains the information related to the exercises of session #2 of
 
 1. Download and setup service registry jUDDI.
 2. Registering CEP service in UDDI.
-3. Discovering (SOAP/REST) Web Service registered in UDDI.
-4. Invoking two services (Operation **_Choice_** === _***IF-ELSE*_ in BPEL)
+3. Discovering SOAP Web Service registered in UDDI.
+4. Discovering REST Web Service registered in UDDI
 
 ___
 
@@ -120,3 +120,8 @@ To support UDDI discovering in the MULE/ESB:
 - For this example of **_CEP Service_** the class `CEPServiceDiscovery.java` is responsible to discover services of this category. The service category that will be registered as `T-Model` is "`cepService`".
 
 - Be sure that the library **"juddi-uddi-client-1.0.0.jar"** is add.
+
+---
+### 4. Discovering and Invoking External RESt Service Project
+
+- Exercise developed in the classroom.
