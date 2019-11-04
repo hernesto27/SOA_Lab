@@ -91,7 +91,7 @@ To support UDDI discovering in the MULE/ESB:
 
     Validate that compiler level is in 1.8:
 
-    ```xml
+```xml
    <?xml version="1.0" encoding="UTF-8" ?>
 <uddi>
 	<manager name="default">
@@ -113,7 +113,7 @@ To support UDDI discovering in the MULE/ESB:
 		</nodes>
 	</manager>
 </uddi>
-    ```
+```
 - Copy the **"uddi.xml"** file to **"src/main/resources/META-INF"**.
 - Add the WSDL service (external services to be invoked)
      
