@@ -122,6 +122,6 @@ To support UDDI discovering in the MULE/ESB:
 - Be sure that the library **"juddi-uddi-client-1.0.0.jar"** is add.
 
 ---
-### 4. Discovering and Invoking External RESt Service Project
+### 4. Discovering and Invoking External REST Service Project
 
 - Exercise developed in the classroom.
