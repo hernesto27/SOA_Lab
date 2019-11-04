@@ -16,6 +16,7 @@ Download "juddi-distro-3.3.6.zip" from here: http://juddi.apache.org/releases.ht
 After downloading and unpacking of the "juddi-distro-3.3.6.zip", check the _**juddi-tomcat-3.3.6 -> conf -> tomcat-users**_ file for the password of the _**uddiadmin**_ user. Change the password before going live.
 
 Check the _**juddi-tomcat-3.3.6 -> conf -> server**_ file and change the port. For this case we choose port 9082.
+>Connector port="8080" protocol="HTTP/1.1".
 
 Start the preconfigured tomcat server by going into the "_**juddi-tomcat-3.3.6 -> bin**_" directory and running _**startup**_.
 
@@ -36,7 +37,7 @@ ___
 ##### For registering a service in the UDDI node follow the steps below:
 
  **URL GUI:** http://localhost:9082/juddi-gui
- **login/password:** admin/admin
+ **login/password:** uddiadmin/"your password"
 
 The steps 1 and 2 creates a UDDI area to represent the enterprise that will provide/publish the services (for this example DAS)
 
