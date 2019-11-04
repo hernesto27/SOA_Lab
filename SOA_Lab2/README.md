@@ -77,127 +77,46 @@ The service to be discovered is the same that was used in session 1, is used to 
 The service endpoint is:
 > https://ws.homologacao.ufsc.br/services/CEPService
     
-    **User/Password:** cepUser/cepUser2008
+    User/Password: cepUser/cepUser2008
 
 The service description is:
 > https://ws.homologacao.ufsc.br/services/CEPService?wsdl
 
-Remember to initialize the input variable in the **_BPEL assign bolck_** using the following code snippet for **_CEP service partnerLink_** in BPEL file:
-```xml
-<int:getCepInfo xmlns:int="http://interfaces.cep.services.ufsc.br/">
-	<cep/>
-</int:getCepInfo>
-```
-In order to support UDDI discovering in the Switchyard project the following modifications should to be made:
+
+To support UDDI discovering in the MULE/ESB:
+
+- Importar o projeto _**cep_service_uddi**_
 
 - Modify **"pom.xml"** file to support UDDI dependency.
 
     Validate that compiler level is in 1.8:
 
     ```xml
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    .....
-    <dependencies>
-    .....
-	    <dependency>
-		<groupId>org.apache.juddi</groupId>
-		<artifactId>juddi-client</artifactId>
-	    </dependency>
-    .....
-    </dependencies>
-    <build>
-        <plugins>
-            .......
-	        <plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-jar-plugin</artifactId>
-			<configuration>
-			    <archive>
-			       <manifestEntries>
-				    <Dependencies>deployment.juddi-uddi-client-1.0.0.jar</Dependencies>
-			       </manifestEntries>
-			    </archive>
-			</configuration>
-	        </plugin>
-            .......
-	<plugins>
-    </build>
+   <?xml version="1.0" encoding="UTF-8" ?>
+<uddi>
+	<manager name="default">
+		<nodes>
+			<node isHomeJUDDI="true">
+				<name>default</name>
+				<properties>
+					<property name="serverName" value="localhost" />
+					<property name="serverPort" value="9082" />
+				</properties>
+				<!-- JAX-WS Transport -->
+				<proxyTransport>org.apache.juddi.v3.client.transport.JAXWSTransport</proxyTransport>
+				<custodyTransferUrl>http://${serverName}:${serverPort}/juddiv3/services/custody-transfer</custodyTransferUrl>
+				<inquiryUrl>http://${serverName}:${serverPort}/juddiv3/services/inquiry</inquiryUrl>
+				<publishUrl>http://${serverName}:${serverPort}/juddiv3/services/publish</publishUrl>
+				<securityUrl>http://${serverName}:${serverPort}/juddiv3/services/security</securityUrl>
+				<subscriptionUrl>http://${serverName}:${serverPort}/juddiv3/services/subscription</subscriptionUrl>
+			</node>
+		</nodes>
+	</manager>
+</uddi>
     ```
 - Copy the **"uddi.xml"** file to **"src/main/resources/META-INF"**.
-- Unzip files of **"switchyard-discovery-java.zip"** to **"src/main/java"**.
-- Modify service WSDL's (external services to be invoked) to state that support **WS-Addressing**:
-     ```xml
-    <wsdl:binding ...>
-    <!-- START: fragmento ws-addresing -->
-    <wsaw:UsingAddressing wsdl:required="false" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" />
-    <!-- END: fragmento ws-addresing -->
-    ........
-    <wsdl:binding/>
-     ```
+- Add the WSDL service (external services to be invoked)
+     
 - For this example of **_CEP Service_** the class `CEPServiceDiscovery.java` is responsible to discover services of this category. The service category that will be registered as `T-Model` is "`cepService`".
 
-- Edit Switchyard project file (switchyard.xml) creating a Java camel route that will do the discovery invoking the code provided in **"switchyard-discovery-java.zip"**.
-
-- Be sure that the library **"juddi-uddi-client-1.0.0.jar"** is in:
-	>**{YOUR/SERVER/INSTALATION/PATH}**/EAP/instalation/folder/standalone/deployments
-
-**Suggestion:** to find this folder go to the tab _**Servers**_ in JBoss Developer Studio, rigth click on the server, go to _**Show In**_ and click in _**File Browser**_ option.
-
-
-___
-
-### 4. Invoking two services (Project name: _Add_Multiply_ChoiceBPEL_)
-To run this example is necessary to deploy the two web service projects that are going to be invoked, these can be found in the `External_Services` folder, the projects are:
-- _**sumService**_
-- _**productService**_
-
-
-#### Code Snnipets
-- **SwitchYard**
-    - **Group Id:** `br.ufsc.das`
-    - **Namespace:** `http://das.ufsc.br`
-    - **target Id:** `br.ufsc.das`
-    
-- **BPEL**
- 
-    Xpath expressions code snippets for the **`choice`** block in the BPEL file:
-    - **Sum flow**
-        ```javascript
-        $processRequest.parameters/operation = "add" or $processRequest.parameters/operation = "sum"
-        ```
-    - **Product flow**
-        ```javascript
-        $processRequest.parameters/operation = "product" or $processRequest.parameters/operation = "multiply"
-        ```
-    - **Unsuported operation flow**
-        Assign error variable message when unsuported operation is sent in the request
-        ```javascript
-        concat($processRequest.parameters/operation," is not a supported arithmetic operation")
-        ```
-- **deploy.xml**
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:das.ufsc.br="http://das.ufsc.br">
-      <process name="das.ufsc.br:CalculatorProcess">
-        <process-events generate="all"/>
-        <!-- BPEL process service -->
-        <provide partnerLink="CalculatorProcess">
-          <service name="das.ufsc.br:CalculatorProcess" port="ignored"/>
-        </provide>
-        <!-- External services -->
-        <invoke partnerLink="Sum_Service">
-          <service name="das.ufsc.br:SumService" port="ignored"/>
-        </invoke>
-        <invoke partnerLink="Prod_Service">
-        	<service name="das.ufsc.br:ProductService" port="ignored"/>
-        </invoke>
-      </process>
-    </deploy>
-    ```
-
-
-   [jUDDI]: <https://juddi.apache.org/>
-   [jUDDI-Setup]:<https://gist.github.com/juandm/d9fae604368a3a9fcb549fd8db4294ba>
-   [jUDDI-RegisterService]:<https://gist.github.com/juandm/d9fae604368a3a9fcb549fd8db4294ba>
-   [provided UDDI]: <https://drive.google.com/open?id=0B4PAsBMomKsjYUJIWjVaQVF5cEk>
+- Be sure that the library **"juddi-uddi-client-1.0.0.jar"** is add.
