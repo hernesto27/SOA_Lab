@@ -1,15 +1,26 @@
 # Session 2 - SOA Lab
 
-This document contains the information related to the exercises of session #2 of SOA Labs:
+This document contains the information related to the exercises of session #2 of SOA Lab:
 
 1. Configuring service registry (UDDI Server - [jUDDI])
 2. Registering CEP service in UDDI.
-3. Discovering SOAP Web Service registered in UDDI and invoking it in SwitchYard.
+3. Discovering (SOAP/REST) Web Service registered in UDDI.
 4. Invoking two services (Operation **_Choice_** === _***IF-ELSE*_ in BPEL)
 
 ___
 
-### 1. Setup service registry jUDDI
+### 1. Download and setup service registry jUDDI
+
+Download "juddi-distro-3.3.6.zip" from here: http://juddi.apache.org/releases.html
+
+After downloading and unpacking of the "juddi-distro-3.3.6.zip", check the _**juddi-tomcat-3.3.6 -> conf -> tomcat-users**_ file for the password of the _**uddiadmin**_ user. Change the password before going live.
+
+Check the _**juddi-tomcat-3.3.6 -> conf -> server**_ file and change the port. For this case we choose port 9082.
+
+Start the preconfigured tomcat server by going into the "_**juddi-tomcat-3.3.6 -> bin**_" directory and running _**startup**_.
+
+Once the server is up and running can make sure the root data was properly installed by browsing to http://localhost:9082/juddiv3
+
 **(The tutorial below is for information purposes, in the lab please USE the [provided UDDI] folder).**
 Follow the tutorial in ([jUDDI-Setup]) for setup and run the service registry.
 
@@ -20,11 +31,11 @@ ___
 #### Note:
 >jUDDI offers an API that is divided into several "sets" (Web Services) representing a specific area of functionality. **For more information read [this](https://juddi.apache.org/docs/3.x/devguide/html/ch01.html#_uddi_and_juddi_api).**
 >The web service used to query the registry is the **_"Inquiry service"_**, available in:
-     http://localhost:8082/juddiv3/services/inquiry?wsdl
+     http://localhost:9082/juddiv3/services/inquiry?wsdl
 
 ##### For registering a service in the UDDI node follow the steps below:
 
- **URL GUI:** http://localhost:8082/juddi-gui
+ **URL GUI:** http://localhost:9082/juddi-gui
  **login/password:** admin/admin
 
 The steps 1 and 2 creates a UDDI area to represent the enterprise that will provide/publish the services (for this example DAS)
