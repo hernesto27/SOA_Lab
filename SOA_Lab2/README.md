@@ -2,7 +2,7 @@
 
 This document contains the information related to the exercises of session #2 of SOA Lab:
 
-1. Configuring service registry (UDDI Server - [jUDDI])
+1. Download and setup service registry jUDDI.
 2. Registering CEP service in UDDI.
 3. Discovering (SOAP/REST) Web Service registered in UDDI.
 4. Invoking two services (Operation **_Choice_** === _***IF-ELSE*_ in BPEL)
@@ -16,14 +16,13 @@ Download "juddi-distro-3.3.6.zip" from here: http://juddi.apache.org/releases.ht
 After downloading and unpacking of the "juddi-distro-3.3.6.zip", check the _**juddi-tomcat-3.3.6 -> conf -> tomcat-users**_ file for the password of the _**uddiadmin**_ user. Change the password before going live.
 
 Check the _**juddi-tomcat-3.3.6 -> conf -> server**_ file and change the port. For this case we choose port 9082.
->Connector port="8080" protocol="HTTP/1.1".
+>Connector port="9082" protocol="HTTP/1.1".
 
 Start the preconfigured tomcat server by going into the "_**juddi-tomcat-3.3.6 -> bin**_" directory and running _**startup**_.
 
 Once the server is up and running can make sure the root data was properly installed by browsing to http://localhost:9082/juddiv3
 
-**(The tutorial below is for information purposes, in the lab please USE the [provided UDDI] folder).**
-Follow the tutorial in ([jUDDI-Setup]) for setup and run the service registry.
+For an advanced configuration consult the -**jUDDI_Guide**_ guide in the _**jUDDI" folder**_
 
 ___
 
