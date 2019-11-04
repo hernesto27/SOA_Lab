@@ -28,7 +28,7 @@ For an advanced configuration consult the -**jUDDI_Guide**_ guide in the _**jUDD
 #### Note: 
 >You can use the preconfigured "juddi-tomcat-3.3.6" of the folder "Ferramentas_1" here:
 
-https://drive.google.com/open?id=13ogiZo3nIRS3icD50Dbk7GLH2-7lG2ax
+https://drive.google.com/open?id=1aEfWLCbYh2G-MyOxqNcSGGOoACTSRTIo
 ___
 
 ### 2. Registering a service in the jUDDI server
