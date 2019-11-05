@@ -35,3 +35,5 @@ https://ws.homologacao.ufsc.br/services/CEPService?wsdl
 4. **Consume a REST Service with MULE/ESB**
 
 - Exercise developed in the classroom.
+
+https://ws.homologacao.ufsc.br/CEPService/cepInfo/88040180
