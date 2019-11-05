@@ -32,3 +32,6 @@ https://ws.homologacao.ufsc.br/services/CEPService?wsdl
 - Description of flow.
 - Test the service.
 
+4. **Consume a REST Service with MULE/ESB**
+
+- Exercise developed in the classroom.
