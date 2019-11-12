@@ -1,0 +1,6 @@
+<requisicao  xmlns:visa="http://visa.das.ufsc.br/">
+            <dataVencimento>#[json:dataVencimento]</dataVencimento>
+            <nome>#[json:nome]</nome>
+            <numero>#[json:numero]</numero>
+            <valor>#[json:valor]</valor>
+</requisicao>

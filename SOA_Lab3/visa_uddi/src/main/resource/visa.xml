@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:visa="http://visa.das.ufsc.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <visa:efetuarPagamento>
+         <requisicao>
+            <dataVencimento>12/2020</dataVencimento>
+            <nome>FULANO</nome>
+            <numero>4234567890123456</numero>
+            <valor>252.43</valor>
+         </requisicao>
+      </visa:efetuarPagamento>
+   </soapenv:Body>
+</soapenv:Envelope>

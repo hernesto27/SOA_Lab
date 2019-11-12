@@ -1,0 +1,16 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "visa"
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Web_Service_Consumer2",
+            "typeId": "efetuarPagamento"
+        }
+    },
+    "id": "e23faade-637d-4c7d-82f5-c5dd1e58fd13",
+    "version": "5.2.0.0"
+}

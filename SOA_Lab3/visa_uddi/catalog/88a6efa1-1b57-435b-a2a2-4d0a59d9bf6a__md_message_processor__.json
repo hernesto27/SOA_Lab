@@ -1,0 +1,11 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "visa"
+        }
+    },
+    "outputMessageMetadata": {},
+    "id": "88a6efa1-1b57-435b-a2a2-4d0a59d9bf6a",
+    "version": "5.2.0.0"
+}
