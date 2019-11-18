@@ -6,6 +6,6 @@ Information related to exercises of session #5 of SOA Labs.
 
 - https://sqlitestudio.pl/index.rvt?act=download
 
-2. Download the project from the folder _**DB**_.
+2. Download the project from the folder _**DB**_
 
-3. Import projects to create database.
+3. Import project in AnypointStudio to create database.
